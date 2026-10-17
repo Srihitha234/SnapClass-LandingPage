@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+
+:root{
+    --bg-main:#F0F4FF;
+    --primary:#5865F2
+}
+body{
+   background-color: var(--bg-main); 
+   font-family: 'Outfit',sans-serif;
+}
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Climate Crisis',sans-serif;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 12px 5%;
+    min-height: 74px;
+    box-sizing: border-box;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    line-height: 1.1;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 2.5vw, 36px);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-cta {
+    flex-shrink: 0;
+}
+
+.btn-pill {
+    background-color: white;
+    color: black;
+    padding: 13px 24px;
+    border-radius: 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pill:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive navbar */
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 12px 3%;
+        gap: 18px;
+    }
+
+    .logo-text {
+        font-size: 1.35rem;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .btn-pill {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 8px 0 2px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .btn-pill {
+        padding: 10px 14px;
+        font-size: 0.8rem;
+        gap: 7px;
+    }
+}
